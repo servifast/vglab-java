@@ -1,7 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
 
     <body>
 
@@ -26,245 +29,33 @@
 
                             <div class="row">
 
-                                <div class="col-lg-4 col-md-6">
-                                    <a href="#" class="listing-item-container">
-                                        <div class="listing-item">
-                                            <img src="../../resources/images/projects2/listing-item-01.jpg" alt=""/>
+                                <h:form>
+                                    <ui:repeat value="#{proyectoC.listProyectos}" var="pro">
+                                        <div class="col-lg-4 col-md-6">
+                                           
+                                            <p:commandLink class="listing-item-container" action="single-project.xhtml?faces-redirect=true">
+                                                <f:setPropertyActionListener value="#{pro}" target="#{proyectoC.selectedPro}"/>
+                                                <!--<a href="#" class="listing-item-container">-->
+                                                    <div class="listing-item">
+                                                        <img src="../../resources/images/projects2/listing-item-01.jpg" alt=""/>
 
-                                            <div class="listing-badge now-open">Nuevo</div>
+                                                        <!--<div class="listing-badge now-open">Nuevo</div>-->
 
-                                            <div class="listing-item-content">
-                                                <span class="tag" style="background: #64BC36">Educación</span>
-                                                <h3>Asistencia y notas</h3>
-                                            </div>
-                                            <span class="like-icon"></span>
+                                                        <div class="listing-item-content">
+                                                            <span class="tag" style="background: #64BC36">#{pro.NOMCAT}</span>
+                                                            <h3>#{pro.TITULOPRO}</h3>
+                                                        </div>
+                                                        <span class="like-icon"></span>
+                                                    </div>
+                                                    <div class="star-rating" data-rating="3.5">
+                                                        <div class="rating-counter">(12 reviews)</div>
+                                                    </div>
+                                                <!--</a>-->
+                                            </p:commandLink>
                                         </div>
-                                        <div class="star-rating" data-rating="3.5">
-                                            <div class="rating-counter">(12 reviews)</div>
-                                        </div>
-                                    </a>
-                                </div>
+                                    </ui:repeat>
+                                </h:form>
 
-                                <div class="col-lg-4 col-md-6">
-                                    <a href="listings-single-page.html" class="listing-item-container">
-                                        <div class="listing-item">
-                                            <img src="../../resources/images/projects2/listing-item-02.jpg" alt=""/>
-
-                                            <div class="listing-badge now-open">Nuevo</div>
-
-                                            <div class="listing-item-content">
-                                                <span class="tag" style="background: #64BC36">Música</span>
-                                                <h3>Conciertos de artistas
-                                                    <i class="verified-icon"></i>
-                                                </h3>
-                                            </div>
-                                            <span class="like-icon"></span>
-                                        </div>
-                                        <div class="star-rating" data-rating="4.5">
-                                            <div class="rating-counter">(30 reviews)</div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <a href="listings-single-page.html" class="listing-item-container">
-                                        <div class="listing-item">
-                                            <img src="../../resources/images/projects2/listing-item-03.jpg" alt=""/>
-
-                                            <div class="listing-item-content">
-                                                <span class="tag" style="background: #64BC36">Aventura</span>
-                                                <h3>Sistema para hoteles
-                                                    <i class="verified-icon"></i>
-                                                </h3>
-                                            </div>
-                                            <span class="like-icon"></span>
-                                        </div>
-                                        <div class="star-rating" data-rating="3.9">
-                                            <div class="rating-counter">(16 reviews)</div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <a href="listings-single-page.html" class="listing-item-container">
-                                        <div class="listing-item">
-                                            <img src="../../resources/images/projects2/listing-item-04.jpg" alt=""/>
-
-                                            <div class="listing-item-content">
-                                                <span class="tag" style="background: #64BC36">Restaurant</span>
-                                                <h3>Sistema para restaurantes (SAAS)
-                                                    <i class="verified-icon"></i>
-                                                </h3>
-                                            </div>
-                                            <span class="like-icon"></span>
-                                        </div>
-                                        <div class="star-rating" data-rating="2.5">
-                                            <div class="rating-counter">(5 reviews)</div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <a href="listings-single-page.html" class="listing-item-container">
-                                        <div class="listing-item">
-                                            <img src="../../resources/images/projects2/listing-item-05.jpg" alt=""/>
-
-                                            <div class="listing-badge now-closed">Prototipo</div>
-
-                                            <div class="listing-item-content">
-                                                <span class="tag" style="background: #64BC36">Finanzas</span>
-                                                <h3>Sistema para el estado
-                                                    <i class="verified-icon"></i>
-                                                </h3>
-                                            </div>
-                                            <span class="like-icon"></span>
-                                        </div>
-                                        <div class="star-rating" data-rating="3.5">
-                                            <div class="rating-counter">(7 reviews)</div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <a href="listings-single-page.html" class="listing-item-container">
-                                        <div class="listing-item">
-                                            <img src="../../resources/images/projects2/listing-item-06.jpg" alt=""/>
-
-                                            <div class="listing-item-content">
-                                                <span class="tag" style="background: #64BC36">Restaurant</span>
-                                                <h3>EasyDrink
-                                                    <i class="verified-icon"></i>
-                                                </h3>
-                                            </div>
-                                            <span class="like-icon"></span>
-                                        </div>
-                                        <div class="star-rating" data-rating="4.5">
-                                            <div class="rating-counter">(18 reviews)</div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <a href="listings-single-page.html" class="listing-item-container">
-                                        <div class="listing-item">
-                                            <img src="../../resources/images/projects2/listing-item-01.jpg" alt=""/>
-
-                                            <div class="listing-badge now-open">Nuevo</div>
-
-                                            <div class="listing-item-content">
-                                                <span class="tag" style="background: #64BC36">Educación</span>
-                                                <h3>Asistencia y notas
-                                                    <i class="verified-icon"></i>
-                                                </h3>
-                                            </div>
-                                            <span class="like-icon"></span>
-                                        </div>
-                                        <div class="star-rating" data-rating="3.5">
-                                            <div class="rating-counter">(12 reviews)</div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <a href="listings-single-page.html" class="listing-item-container">
-                                        <div class="listing-item">
-                                            <img src="../../resources/images/projects2/listing-item-02.jpg" alt=""/>
-
-                                            <div class="listing-badge now-open">Nuevo</div>
-
-                                            <div class="listing-item-content">
-                                                <span class="tag" style="background: #64BC36">Música</span>
-                                                <h3>Conciertos de artistas
-                                                    <i class="verified-icon"></i>
-                                                </h3>
-                                            </div>
-                                            <span class="like-icon"></span>
-                                        </div>
-                                        <div class="star-rating" data-rating="4.5">
-                                            <div class="rating-counter">(30 reviews)</div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <a href="listings-single-page.html" class="listing-item-container">
-                                        <div class="listing-item">
-                                            <img src="../../resources/images/projects2/listing-item-03.jpg" alt=""/>
-
-                                            <div class="listing-item-content">
-                                                <span class="tag" style="background: #64BC36">Aventura</span>
-                                                <h3>Sistema para hoteles
-                                                    <i class="verified-icon"></i>
-                                                </h3>
-                                            </div>
-                                            <span class="like-icon"></span>
-                                        </div>
-                                        <div class="star-rating" data-rating="3.9">
-                                            <div class="rating-counter">(16 reviews)</div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <a href="listings-single-page.html" class="listing-item-container">
-                                        <div class="listing-item">
-                                            <img src="../../resources/images/projects2/listing-item-01.jpg" alt=""/>
-
-                                            <div class="listing-badge now-open">Nuevo</div>
-
-                                            <div class="listing-item-content">
-                                                <span class="tag" style="background: #64BC36">Educación</span>
-                                                <h3>Asistencia y notas
-                                                    <i class="verified-icon"></i>
-                                                </h3>
-                                            </div>
-                                            <span class="like-icon"></span>
-                                        </div>
-                                        <div class="star-rating" data-rating="3.5">
-                                            <div class="rating-counter">(12 reviews)</div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <a href="listings-single-page.html" class="listing-item-container">
-                                        <div class="listing-item">
-                                            <img src="../../resources/images/projects2/listing-item-02.jpg" alt=""/>
-
-                                            <div class="listing-badge now-open">Nuevo</div>
-
-                                            <div class="listing-item-content">
-                                                <span class="tag" style="background: #64BC36">Música</span>
-                                                <h3>Conciertos de artistas
-                                                    <i class="verified-icon"></i>
-                                                </h3>
-                                            </div>
-                                            <span class="like-icon"></span>
-                                        </div>
-                                        <div class="star-rating" data-rating="4.5">
-                                            <div class="rating-counter">(30 reviews)</div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <a href="listings-single-page.html" class="listing-item-container">
-                                        <div class="listing-item">
-                                            <img src="../../resources/images/projects2/listing-item-03.jpg" alt=""/>
-
-                                            <div class="listing-item-content">
-                                                <span class="tag" style="background: #64BC36">Aventura</span>
-                                                <h3>Sistema para hoteles
-                                                    <i class="verified-icon"></i>
-                                                </h3>
-                                            </div>
-                                            <span class="like-icon"></span>
-                                        </div>
-                                        <div class="star-rating" data-rating="3.9">
-                                            <div class="rating-counter">(16 reviews)</div>
-                                        </div>
-                                    </a>
-                                </div>
                             </div>
 
                         </div>
