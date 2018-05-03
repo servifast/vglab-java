@@ -1,332 +1,330 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
 
     <body>
 
         <ui:composition template="./../template/TemplatePro.xhtml">
 
             <ui:define name="content">
-                <div class="container">
-                    <div class="row sticky-wrapper">
-                        <div class="col-lg-8 col-md-8 padding-right-30">
+                <h:form>
+                    <div class="container">
+                        <div class="row sticky-wrapper">
+                            <div class="col-lg-8 col-md-8 padding-right-30">
 
-                            <!-- Titlebar -->
-                            <div id="titlebar" class="listing-titlebar">
-                                <div class="row">
-                                    <div class="col-md-2 col-sm-6">
-                                        <div class="card">
-                                            <img class="card-img-top img-fluid" src="../../resources/images/logovg.png" alt="logo"/>
+                                <!-- Titlebar -->
+                                <div id="titlebar" class="listing-titlebar">
+                                    <div class="row">
+                                        <div class="col-md-2 col-sm-6">
+                                            <div class="card">
+                                                <img class="card-img-top img-fluid" src="../../resources/images/logovg.png" alt="logo"/>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-10">
-                                        <div class="listing-titlebar-title">
-                                            <h2>LQA System
-                                                <span class="listing-tag">Agricultura</span>
-                                            </h2>
-                                            <span>
-                                                <a href="#listing-location" class="listing-address">
-                                                    <i class="fa fa fa-building"></i>
-                                                    Laboratorio de Química Agrícola
-                                                </a>
-                                            </span>
-                                            <div class="star-rating" data-rating="5">
-                                                <div class="rating-counter">
-                                                    <a href="#listing-reviews">(31 reviews)</a>
+                                        <div class="col-md-10">
+                                            <div class="listing-titlebar-title">
+                                                <h2>#{proyectoC.selectedPro.TITULOPRO}
+                                                    <span class="listing-tag">#{proyectoC.selectedPro.NOMCAT}</span>
+                                                </h2>
+                                                <span>
+                                                    <a href="#listing-location" class="listing-address">
+                                                        <i class="fa fa fa-building"></i>
+                                                        #{proyectoC.selectedPro.RAZONSOCIAL}
+                                                    </a>
+                                                </span>
+                                                <div class="star-rating" data-rating="5">
+                                                    <div class="rating-counter">
+                                                        <a href="#listing-reviews">(31 reviews)</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="simple-slick-carousel dots-nav">
-
-                                        <!-- Listing Item -->
-                                        <div class="carousel-item">
-                                            <a href="#" class="listing-item-container compact">
-                                                <div>
-                                                    <img src="../../resources/images/projects/lqavg1.png" alt=""/>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <!-- Listing Item / End -->
-
-                                        <!-- Listing Item -->
-                                        <div class="carousel-item">
-                                            <a href="#" class="listing-item-container compact">
-                                                <div>
-                                                    <img src="../../resources/images/projects/lqavg2.png" alt=""/>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <!-- Listing Item / End -->
-
-                                        <!-- Listing Item -->
-                                        <div class="carousel-item">
-                                            <a href="#" class="listing-item-container compact">
-                                                <div>
-                                                    <img src="../../resources/images/projects/lqavg3.png" alt=""/>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <!-- Listing Item / End -->
-
-                                        <!-- Listing Item -->
-                                        <div class="carousel-item">
-                                            <a href="#" class="listing-item-container compact">
-                                                <div>
-                                                    <img src="../../resources/images/projects/lqavg4.png" alt=""/>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <!-- Listing Item / End -->
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- Listing Nav -->
-                            <div class="listing-nav-container">
-                                <ul class="listing-nav">
-                                    <li>
-                                        <a href="#listing-overview" class="active">Descripción</a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Overview -->
-                            <div id="listing-overview" class="listing-section">
-
-                                <!-- Description -->
-
-                                <p class="text-justify">
-                                    El Sistema para el Laboratorio Químico agrícola, fue desarrollado por los alumnos de la carrera de Análisis de Sistemas del
-                                    3er año con el fin de administrar los datos durante el proceso de análisis de muestras de principio
-                                    a fin. Este software se desarrolló basado en en el lenguaje de programación Java debido a sus
-                                    características, con métodos ágiles. El objetivo principal que tiene el sistema es estar al alcance
-                                    de cualquier persona sin importar las distancias y mostrar información de calidad, confiable
-                                    y segura. Es por esta razón que se optó por la tecnología web.
-                                </p>
-
-                                <!-- Amenities -->
-                                <h3 class="listing-desc-headline">Tecnologías</h3>
-                                <ul class="listing-features margin-top-0">
-                                    <li>
-                                        <i class="icon-java"></i> Java</li>
-                                    <li>
-                                        <i class="icon-css3-alt"></i> Materialize CSS</li>
-                                    <li>
-                                        <i class="icon-html5-alt"></i> HTML5</li>
-                                    <li>
-                                        <i class="icon-javascript-alt"></i> Javascript</li>
-                                    <li>
-                                        <i class="icon-oracle-alt"></i> Oracle</li>
-                                </ul>
-                            </div>
-
-                            <div id="listing-pricing-list" class="listing-section">
-                                <h3 class="listing-desc-headline margin-top-70 margin-bottom-30">Comentarios
-                                    <span>(12)</span>
-                                </h3>
-
-                                <div class="show-more">
-                                    <div id="listing-reviews" class="listing-section">
-
-                                        <div class="clearfix"></div>
-
-                                        <!-- Reviews -->
-                                        <section class="comments listing-reviews">
-
-                                            <ul>
-                                                <li>
-                                                    <div class="avatar">
-                                                        <img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" />
-                                                    </div>
-                                                    <div class="comment-content">
-                                                        <div class="arrow-comment"></div>
-                                                        <div class="comment-by">Kathy Brown
-                                                            <span class="date">June 2017</span>
-                                                            <div class="star-rating" data-rating="5"></div>
-                                                        </div>
-                                                        <p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere
-                                                            tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia
-                                                            neque non metus</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="avatar">
-                                                        <img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /> </div>
-                                                    <div class="comment-content">
-                                                        <div class="arrow-comment"></div>
-                                                        <div class="comment-by">John Doe
-                                                            <span class="date">May 2017</span>
-                                                            <div class="star-rating" data-rating="4"></div>
-                                                        </div>
-                                                        <p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim.
-                                                            Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis
-                                                            nunc tellus sollicitudin mauris.</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="avatar">
-                                                        <img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" />
-                                                    </div>
-                                                    <div class="comment-content">
-                                                        <div class="arrow-comment"></div>
-                                                        <div class="comment-by">Kathy Brown
-                                                            <span class="date">June 2017</span>
-                                                            <div class="star-rating" data-rating="5"></div>
-                                                        </div>
-                                                        <p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere
-                                                            tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia
-                                                            neque non metus</p>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="avatar">
-                                                        <img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /> </div>
-                                                    <div class="comment-content">
-                                                        <div class="arrow-comment"></div>
-                                                        <div class="comment-by">John Doe
-                                                            <span class="date">May 2017</span>
-                                                            <div class="star-rating" data-rating="5"></div>
-                                                        </div>
-                                                        <p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim.
-                                                            Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis
-                                                            nunc tellus sollicitudin mauris.</p>
-                                                    </div>
-
-                                                </li>
-                                            </ul>
-                                        </section>
-                                    </div>
-                                </div>
-                                <a href="#" class="show-more-button" data-more-title="Show More" data-less-title="Show Less">
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                            </div>
-
-                            <!-- Add Review Box -->
-                            <div id="add-review" class="add-review-box">
-
-                                <!-- Add Review -->
-                                <h3 class="listing-desc-headline margin-bottom-20">Agregar comentario</h3>
-
-                                <span class="leave-rating-title">Califica este proyecto</span>
-
-                                <!-- Rating / Upload Button -->
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <!-- Leave Rating -->
-                                        <div class="clearfix"></div>
-                                        <div class="leave-rating margin-bottom-30">
-                                            <input type="radio" name="rating" id="rating-1" value="1" />
-                                            <label for="rating-1" class="fa fa-star"></label>
-                                            <input type="radio" name="rating" id="rating-2" value="2" />
-                                            <label for="rating-2" class="fa fa-star"></label>
-                                            <input type="radio" name="rating" id="rating-3" value="3" />
-                                            <label for="rating-3" class="fa fa-star"></label>
-                                            <input type="radio" name="rating" id="rating-4" value="4" />
-                                            <label for="rating-4" class="fa fa-star"></label>
-                                            <input type="radio" name="rating" id="rating-5" value="5" />
-                                            <label for="rating-5" class="fa fa-star"></label>
+                                    <div class="col-md-12">
+                                        <div class="simple-slick-carousel dots-nav">
+
+                                            <!-- Listing Item -->
+                                            <div class="carousel-item">
+                                                <a href="#" class="listing-item-container compact">
+                                                    <div>
+                                                        <img src="../../resources/images/projects/lqavg1.png" alt=""/>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- Listing Item / End -->
+
+                                            <!-- Listing Item -->
+                                            <div class="carousel-item">
+                                                <a href="#" class="listing-item-container compact">
+                                                    <div>
+                                                        <img src="../../resources/images/projects/lqavg2.png" alt=""/>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- Listing Item / End -->
+
+                                            <!-- Listing Item -->
+                                            <div class="carousel-item">
+                                                <a href="#" class="listing-item-container compact">
+                                                    <div>
+                                                        <img src="../../resources/images/projects/lqavg3.png" alt=""/>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- Listing Item / End -->
+
+                                            <!-- Listing Item -->
+                                            <div class="carousel-item">
+                                                <a href="#" class="listing-item-container compact">
+                                                    <div>
+                                                        <img src="../../resources/images/projects/lqavg4.png" alt=""/>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- Listing Item / End -->
                                         </div>
-                                        <div class="clearfix"></div>
+
                                     </div>
                                 </div>
 
-                                <!-- Review Comment -->
-                                <form id="add-comment" class="add-comment">
-                                    <fieldset>
+                                <!-- Listing Nav -->
+                                <div class="listing-nav-container">
+                                    <ul class="listing-nav">
+                                        <li>
+                                            <a href="#listing-overview" class="active">Descripción</a>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                                        <div>
-                                            <label>Comentario:</label>
-                                            <textarea cols="40" rows="3"></textarea>
+                                <!-- Overview -->
+                                <div id="listing-overview" class="listing-section">
+
+                                    <!-- Description -->
+
+                                    <p class="text-justify">
+                                        #{proyectoC.selectedPro.DESCPRO}
+                                    </p>
+
+                                    <!-- Amenities -->
+                                    <h3 class="listing-desc-headline">Tecnologías</h3>
+                                    <ul class="listing-features margin-top-0">
+                                        <li>
+                                            <i class="icon-java"></i> Java</li>
+                                        <li>
+                                            <i class="icon-css3-alt"></i> Materialize CSS</li>
+                                        <li>
+                                            <i class="icon-html5-alt"></i> HTML5</li>
+                                        <li>
+                                            <i class="icon-javascript-alt"></i> Javascript</li>
+                                        <li>
+                                            <i class="icon-oracle-alt"></i> Oracle</li>
+                                    </ul>
+                                </div>
+
+                                <div id="listing-pricing-list" class="listing-section">
+                                    <h3 class="listing-desc-headline margin-top-70 margin-bottom-30">Comentarios
+                                        <span>(12)</span>
+                                    </h3>
+
+                                    <div class="show-more">
+                                        <div id="listing-reviews" class="listing-section">
+
+                                            <div class="clearfix"></div>
+
+                                            <!-- Reviews -->
+                                            <section class="comments listing-reviews">
+
+                                                <ul>
+                                                    <li>
+                                                        <div class="avatar">
+                                                            <img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" />
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            <div class="arrow-comment"></div>
+                                                            <div class="comment-by">Kathy Brown
+                                                                <span class="date">June 2017</span>
+                                                                <div class="star-rating" data-rating="5"></div>
+                                                            </div>
+                                                            <p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere
+                                                                tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia
+                                                                neque non metus</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="avatar">
+                                                            <img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /> </div>
+                                                        <div class="comment-content">
+                                                            <div class="arrow-comment"></div>
+                                                            <div class="comment-by">John Doe
+                                                                <span class="date">May 2017</span>
+                                                                <div class="star-rating" data-rating="4"></div>
+                                                            </div>
+                                                            <p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim.
+                                                                Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis
+                                                                nunc tellus sollicitudin mauris.</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="avatar">
+                                                            <img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" />
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            <div class="arrow-comment"></div>
+                                                            <div class="comment-by">Kathy Brown
+                                                                <span class="date">June 2017</span>
+                                                                <div class="star-rating" data-rating="5"></div>
+                                                            </div>
+                                                            <p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere
+                                                                tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia
+                                                                neque non metus</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="avatar">
+                                                            <img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /> </div>
+                                                        <div class="comment-content">
+                                                            <div class="arrow-comment"></div>
+                                                            <div class="comment-by">John Doe
+                                                                <span class="date">May 2017</span>
+                                                                <div class="star-rating" data-rating="5"></div>
+                                                            </div>
+                                                            <p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim.
+                                                                Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis
+                                                                nunc tellus sollicitudin mauris.</p>
+                                                        </div>
+
+                                                    </li>
+                                                </ul>
+                                            </section>
                                         </div>
+                                    </div>
+                                    <a href="#" class="show-more-button" data-more-title="Show More" data-less-title="Show Less">
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                </div>
 
-                                    </fieldset>
+                                <!-- Add Review Box -->
+                                <div id="add-review" class="add-review-box">
 
-                                    <button class="btn btn-outline-primary btn-lg btn-block">Enviar Comentario</button>
+                                    <!-- Add Review -->
+                                    <h3 class="listing-desc-headline margin-bottom-20">Agregar comentario</h3>
+
+                                    <span class="leave-rating-title">Califica este proyecto</span>
+
+                                    <!-- Rating / Upload Button -->
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <!-- Leave Rating -->
+                                            <div class="clearfix"></div>
+                                            <div class="leave-rating margin-bottom-30">
+                                                <input type="radio" name="rating" id="rating-1" value="1" />
+                                                <label for="rating-1" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-2" value="2" />
+                                                <label for="rating-2" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-3" value="3" />
+                                                <label for="rating-3" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-4" value="4" />
+                                                <label for="rating-4" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-5" value="5" />
+                                                <label for="rating-5" class="fa fa-star"></label>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Review Comment -->
+                                    <form id="add-comment" class="add-comment">
+                                        <fieldset>
+
+                                            <div>
+                                                <label>Comentario:</label>
+                                                <textarea cols="40" rows="3"></textarea>
+                                            </div>
+
+                                        </fieldset>
+
+                                        <button class="btn btn-outline-primary btn-lg btn-block">Enviar Comentario</button>
+                                        <div class="clearfix"></div>
+                                    </form>
+
+                                </div>
+                                <!-- Add Review Box / End -->
+
+
+                            </div>
+
+
+                            <!-- Sidebar
+                            ================================================== -->
+                            <div class="col-lg-4 col-md-4 margin-top-75 sticky">
+                                <!-- Verified Badge -->
+                                <a style="color: #ffffff; cursor: pointer" target="_blank" href="#{proyectoC.selectedPro.DEMOPRO}">
+                                    <div class="verified-badge with-tip" data-tip-content="Ver demostración de este sistema">
+                                        <i class="fa fa-check"></i> Ver demo
+                                    </div>
+                                </a>
+
+                                <!-- Opening Hours -->
+                                <div class="boxed-widget opening-hours margin-top-35">
+                                    <h3>
+                                        <i class="fa fa fa-users"></i> Team
+                                    </h3>
+                                    <div class="hosted-by-title">
+                                        <h4>
+                                            <span>Desarrollador web</span>
+                                            <a href="pages-user-profile.html">Cristhian Antonio Alcala</a>
+                                        </h4>
+                                        <a href="#" class="hosted-by-avatar">
+                                            <img src="../../resources/images/dev/dev1.jpg" alt="user"/>
+                                        </a>
+                                    </div>
+                                    <div class="hosted-by-title">
+                                        <h4>
+                                            <span>Desarrollador web</span>
+                                            <a href="#">Antonio Araujo Veliz</a>
+                                        </h4>
+                                        <a href="pages-user-profile.html" class="hosted-by-avatar">
+                                            <img src="../../resources/images/dev/dev2.jpg" alt="user"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Opening Hours / End -->
+
+                                <!-- Share / Like -->
+                                <div class="listing-share margin-top-40 margin-bottom-40 no-border">
+                                    <button class="like-button">
+                                        <span class="like-icon"></span> Agregar a favoritos
+                                    </button>
+
+                                    <!-- Share Buttons -->
+                                    <ul class="share-buttons margin-top-40 margin-bottom-0">
+                                        <h5>Redes sociales</h5>
+                                        <li>
+                                            <a class="fb-share" href="#">
+                                                <i class="fa fa-facebook"></i> Compartir</a>
+                                        </li>
+                                        <li>
+                                            <a class="twitter-share" href="#">
+                                                <i class="fa fa-twitter"></i> Tweetear</a>
+                                        </li>
+                                        <!-- <li><a class="pinterest-share" href="#"><i class="fa fa-pinterest-p"></i> Pin</a></li> -->
+                                    </ul>
                                     <div class="clearfix"></div>
-                                </form>
+                                </div>
 
                             </div>
-                            <!-- Add Review Box / End -->
-
+                            <!-- Sidebar / End -->
 
                         </div>
-
-
-                        <!-- Sidebar
-                        ================================================== -->
-                        <div class="col-lg-4 col-md-4 margin-top-75 sticky">
-                            <!-- Verified Badge -->
-                            <div class="verified-badge with-tip" data-tip-content="Ver demostración de este sistema">
-                                <a style="color: #ffffff" href="#">
-                                    <i class="fa fa-check"></i> Ver demo</a>
-                            </div>
-
-
-                            <!-- Opening Hours -->
-                            <div class="boxed-widget opening-hours margin-top-35">
-                                <h3>
-                                    <i class="fa fa fa-users"></i> Team
-                                </h3>
-                                <div class="hosted-by-title">
-                                    <h4>
-                                        <span>Desarrollador web</span>
-                                        <a href="pages-user-profile.html">Cristhian Antonio Alcala</a>
-                                    </h4>
-                                    <a href="#" class="hosted-by-avatar">
-                                        <img src="../../resources/images/dev/dev1.jpg" alt="user"/>
-                                    </a>
-                                </div>
-                                <div class="hosted-by-title">
-                                    <h4>
-                                        <span>Desarrollador web</span>
-                                        <a href="#">Antonio Araujo Veliz</a>
-                                    </h4>
-                                    <a href="pages-user-profile.html" class="hosted-by-avatar">
-                                        <img src="../../resources/images/dev/dev2.jpg" alt="user"/>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Opening Hours / End -->
-
-                            <!-- Share / Like -->
-                            <div class="listing-share margin-top-40 margin-bottom-40 no-border">
-                                <button class="like-button">
-                                    <span class="like-icon"></span> Agregar a favoritos
-                                </button>
-
-                                <!-- Share Buttons -->
-                                <ul class="share-buttons margin-top-40 margin-bottom-0">
-                                    <h5>Redes sociales</h5>
-                                    <li>
-                                        <a class="fb-share" href="#">
-                                            <i class="fa fa-facebook"></i> Compartir</a>
-                                    </li>
-                                    <li>
-                                        <a class="twitter-share" href="#">
-                                            <i class="fa fa-twitter"></i> Tweetear</a>
-                                    </li>
-                                    <!-- <li><a class="pinterest-share" href="#"><i class="fa fa-pinterest-p"></i> Pin</a></li> -->
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
-
-                        </div>
-                        <!-- Sidebar / End -->
-
                     </div>
-                </div>
+                </h:form>
             </ui:define>
 
         </ui:composition>
