@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <body>
+
+        <ui:composition template="./../template/TemplateAdmin.xhtml">
+
+            <ui:define name="content">
+                <div class="panel panel-default m-b-0">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="m-y-0">Proyectos</h3>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary">
+                                        <i class="zmdi zmdi-plus"></i> Nuevo proyecto</button>
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Agregar equipo</a></li>
+                                        <li><a href="#">Agregar empresa</a></li>
+                                        <li><a href="#">Agregar tecnología</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+
+                    </div>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
