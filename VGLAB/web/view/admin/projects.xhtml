@@ -23,8 +23,8 @@
                                         <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Agregar equipo</a></li>
-                                        <li><a href="#">Agregar empresa</a></li>
+                                        <li><a href="#" onclick="PF('dialogNewPer').show()" >Agregar persona</a></li>
+                                        <li><a href="#" onclick="PF('dialogNewEmp').show()">Agregar empresa</a></li>
                                         <li><a href="#">Agregar tecnología</a></li>
                                     </ul>
                                 </div>
@@ -35,6 +35,8 @@
 
                     </div>
                 </div>
+                
+                <ui:include src="project/nuevo.xhtml"/>
             </ui:define>
 
         </ui:composition>
