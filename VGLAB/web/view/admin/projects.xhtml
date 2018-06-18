@@ -65,12 +65,12 @@
                                                     </h:panelGrid>
                                                 </div>
                                                 <div class="col-md-9">
-                                                    <p:dataTable>
+                                                    <p:dataTable value="#{empresaC.listEmpresa}" var="empresa">
                                                         <p:column headerText="Razon social">
-                                                            <p:outputLabel value=""/>
+                                                            <p:outputLabel value="#{empresa.RAZONSOCIAL}"/>
                                                         </p:column>
                                                         <p:column headerText="RUC">
-                                                            <p:outputLabel value=""/>
+                                                            <p:outputLabel value="#{empresa.RUCEMP}"/>
                                                         </p:column>
                                                     </p:dataTable>
                                                 </div>
