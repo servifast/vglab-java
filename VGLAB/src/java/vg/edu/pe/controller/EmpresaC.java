@@ -26,11 +26,27 @@ public class EmpresaC implements Serializable {
         }
     }
 
+    public void limpiar() {
+        emp = new EmpresaM();
+    }
+
     public void listarEmpresa() throws Exception {
         EmpresaD dao;
         try {
             dao = new EmpresaD();
             listEmpresa = dao.listarEmpresa();
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    public void guardarEmpresa() throws Exception {
+        EmpresaD dao;
+        try {
+            dao = new EmpresaD();
+            dao.guardarEmpresa(emp);
+            listarEmpresa();
+            limpiar();
         } catch (Exception e) {
             throw e;
         }

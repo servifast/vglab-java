@@ -50,7 +50,7 @@
                                 <p>Cras varius vehicula lorem sollicitudin ullamcorper. Sed nec purus eget velit elementum posuere. Aliquam et orci tincidunt, vulputate tortor quis, iaculis sapien. Praesent semper dui at porta consequat. In quis turpis mollis, rutrum erat tincidunt, tincidunt ipsum. Suspendisse feugiat bibendum faucibus.</p>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="tab-3">
-                                <h:form>
+                                <h:form id="formEmpresas">
                                     <div class="panel panel-default">
                                         <div class="panel-body">
                                             <div class="row">
@@ -59,13 +59,14 @@
                                                         <h4>Nueva empresa</h4>
                                                         <br/>
                                                         <p:outputLabel value="Razon social"/>
-                                                        <p:inputText value=""/>
+                                                        <p:inputText value="#{empresaC.emp.RAZONSOCIAL}"/>
                                                         <p:outputLabel value="RUC"/>
-                                                        <p:inputText value=""/>
+                                                        <p:inputText value="#{empresaC.emp.RUCEMP}"/>
                                                     </h:panelGrid>
+                                                    <p:commandButton value="Agregar" actionListener="#{empresaC.guardarEmpresa()}" update="formEmpresas"/>
                                                 </div>
                                                 <div class="col-md-9">
-                                                    <p:dataTable value="#{empresaC.listEmpresa}" var="empresa">
+                                                    <p:dataTable id="tblEmpresas" value="#{empresaC.listEmpresa}" var="empresa">
                                                         <p:column headerText="Razon social">
                                                             <p:outputLabel value="#{empresa.RAZONSOCIAL}"/>
                                                         </p:column>

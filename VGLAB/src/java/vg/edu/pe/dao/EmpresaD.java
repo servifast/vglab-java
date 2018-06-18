@@ -34,4 +34,20 @@ public class EmpresaD extends Dao implements EmpresaI {
         return lista;
     }
 
+    @Override
+    public void guardarEmpresa(EmpresaM empresa) throws Exception {
+        this.Conexion();
+        try {
+            String sql = "INSERT INTO EMPRESA(RAZONSOCIAL,RUCEMP) values (?,?)";
+            PreparedStatement ps = this.getCn().prepareStatement(sql);
+            ps.setString(1, empresa.getRAZONSOCIAL());
+            ps.setString(2, empresa.getRUCEMP());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw e;
+        } finally {
+            this.Cerrar();
+        }
+    }
+
 }
