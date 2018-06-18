@@ -30,6 +30,8 @@ public class EmpresaD extends Dao implements EmpresaI {
             }
         } catch (SQLException e) {
             throw e;
+        } finally {
+            this.Cerrar();
         }
         return lista;
     }

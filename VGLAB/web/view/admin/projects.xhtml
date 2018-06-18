@@ -81,8 +81,40 @@
                                 </h:form>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="tab-4">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia non massa a euismod. Nam bibendum mauris mollis, ultricies orci vitae, tristique est. Mauris pellentesque justo ut est fringilla imperdiet.</p>
-                                <p>Cras varius vehicula lorem sollicitudin ullamcorper. Sed nec purus eget velit elementum posuere. Aliquam et orci tincidunt, vulputate tortor quis, iaculis sapien. Praesent semper dui at porta consequat. In quis turpis mollis, rutrum erat tincidunt, tincidunt ipsum. Suspendisse feugiat bibendum faucibus.</p>
+                                <h:form id="formTecnologias">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <h:panelGrid columns="1">
+                                                        <h4>Nueva tecnologia</h4>
+                                                        <br/>
+                                                        <p:outputLabel value="Nombre"/>
+                                                        <p:inputText value="#{tecnologiaC.tec.DESCTEC}"/>
+                                                        <p:outputLabel value="Tipo"/>
+                                                        <p:inputText value="#{tecnologiaC.tec.TIPOTEC}"/>
+                                                        <p:outputLabel value="Subtipo"/>
+                                                        <p:inputText value="#{tecnologiaC.tec.SUBTIPOTEC}"/>
+                                                    </h:panelGrid>
+                                                    <p:commandButton value="Agregar" actionListener="#{tecnologiaC.guardarTecnologia()}" update="formTecnologias"/>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <p:dataTable id="tblTecnologia" value="#{tecnologiaC.listTecnologia}" var="tecno">
+                                                        <p:column headerText="Nombre">
+                                                            <p:outputLabel value="#{tecno.DESCTEC}"/>
+                                                        </p:column>
+                                                        <p:column headerText="Tipo">
+                                                            <p:outputLabel value="#{tecno.TIPOTEC}"/>
+                                                        </p:column>
+                                                        <p:column headerText="Subtipo">
+                                                            <p:outputLabel value="#{tecno.SUBTIPOTEC}"/>
+                                                        </p:column>
+                                                    </p:dataTable>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h:form>
                             </div>
                         </div>
                     </div>
