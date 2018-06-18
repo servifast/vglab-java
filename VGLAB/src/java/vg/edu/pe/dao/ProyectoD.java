@@ -34,6 +34,8 @@ public class ProyectoD extends Dao implements ProyectoI {
             }
         } catch (SQLException e) {
             throw e;
+        } finally {
+            this.Cerrar();
         }
         return lista;
     }
@@ -59,6 +61,8 @@ public class ProyectoD extends Dao implements ProyectoI {
             }
         } catch (SQLException e) {
             throw e;
+        } finally {
+            this.Cerrar();
         }
         return lista;
     }

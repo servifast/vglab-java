@@ -22,6 +22,8 @@ public class PersonaD extends Dao implements PersonaI {
             ps.executeUpdate();
         } catch (SQLException e) {
             throw e;
+        } finally {
+            this.Cerrar();
         }
     }
 
@@ -38,6 +40,8 @@ public class PersonaD extends Dao implements PersonaI {
             ps.executeUpdate();
         } catch (SQLException e) {
             throw e;
+        } finally {
+            this.Cerrar();
         }
 
     }
@@ -52,8 +56,9 @@ public class PersonaD extends Dao implements PersonaI {
             ps.executeUpdate();
         } catch (SQLException e) {
             throw e;
+        } finally {
+            this.Cerrar();
         }
-
     }
 
     @Override
@@ -74,6 +79,8 @@ public class PersonaD extends Dao implements PersonaI {
             }
         } catch (SQLException e) {
             throw e;
+        } finally {
+            this.Cerrar();
         }
         return lista;
     }
