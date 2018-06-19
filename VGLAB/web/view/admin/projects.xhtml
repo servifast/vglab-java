@@ -29,21 +29,18 @@
                                 <a href="#tab-4" role="tab" data-toggle="tab">
                                     <i class="zmdi zmdi-fire"></i> Tecnologías</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <i class="zmdi zmdi-menu"></i> Otros
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Rubros</a></li>
-                                    <li><a href="#">Cargos</a></li>
-                                </ul>
+                            <li>
+                                <a href="#tab-5" role="tab" data-toggle="tab">
+                                    <i class="zmdi zmdi-menu"></i> Categorias</a>
+                            </li>
+                            <li>
+                                <a href="#tab-6" role="tab" data-toggle="tab">
+                                    <i class="zmdi zmdi-menu"></i> Cargos</a>
                             </li>
                         </ul>
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active" id="tab-1">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia non massa a euismod. Nam bibendum mauris mollis, ultricies orci vitae, tristique est. Mauris pellentesque justo ut est fringilla imperdiet.</p>
-                                <p>Cras varius vehicula lorem sollicitudin ullamcorper. Sed nec purus eget velit elementum posuere. Aliquam et orci tincidunt, vulputate tortor quis, iaculis sapien. Praesent semper dui at porta consequat. In quis turpis mollis, rutrum erat tincidunt, tincidunt ipsum. Suspendisse feugiat bibendum faucibus.</p>
+                                Hola desde proyectos
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="tab-2">
                                 <h:form id="formPersonas">
@@ -135,6 +132,31 @@
                                                         </p:column>
                                                         <p:column headerText="Subtipo">
                                                             <p:outputLabel value="#{tecno.SUBTIPOTEC}"/>
+                                                        </p:column>
+                                                    </p:dataTable>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h:form>
+
+                                <h:form id="formCategorias">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <h:panelGrid columns="1">
+                                                        <h4>Nueva categoria</h4>
+                                                        <br/>
+                                                        <p:outputLabel value="Nombre"/>
+                                                        <p:inputText value="#{categoriaC.cat.NOMCAT}"/>
+                                                    </h:panelGrid>
+                                                    <p:commandButton value="Agregar" actionListener="#{categoriaC.guardarCategoria()}" update="formCategorias"/>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <p:dataTable id="tblCategoria" value="#{categoriaC.listCategorias}" var="cate">
+                                                        <p:column headerText="Nombre de la categoria">
+                                                            <p:outputLabel value="#{cate.NOMCAT}"/>
                                                         </p:column>
                                                     </p:dataTable>
                                                 </div>
