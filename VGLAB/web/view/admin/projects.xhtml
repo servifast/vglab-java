@@ -46,8 +46,35 @@
                                 <p>Cras varius vehicula lorem sollicitudin ullamcorper. Sed nec purus eget velit elementum posuere. Aliquam et orci tincidunt, vulputate tortor quis, iaculis sapien. Praesent semper dui at porta consequat. In quis turpis mollis, rutrum erat tincidunt, tincidunt ipsum. Suspendisse feugiat bibendum faucibus.</p>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="tab-2">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia non massa a euismod. Nam bibendum mauris mollis, ultricies orci vitae, tristique est. Mauris pellentesque justo ut est fringilla imperdiet.</p>
-                                <p>Cras varius vehicula lorem sollicitudin ullamcorper. Sed nec purus eget velit elementum posuere. Aliquam et orci tincidunt, vulputate tortor quis, iaculis sapien. Praesent semper dui at porta consequat. In quis turpis mollis, rutrum erat tincidunt, tincidunt ipsum. Suspendisse feugiat bibendum faucibus.</p>
+                                <h:form id="formPersonas">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <h:panelGrid columns="1">
+                                                        <h4>Nueva persona</h4>
+                                                        <br/>
+                                                        <p:outputLabel value="Nombres"/>
+                                                        <p:inputText value="#{personaC.pm.NOMPER}"/>
+                                                        <p:outputLabel value="Apellidos"/>
+                                                        <p:inputText value="#{personaC.pm.APEPER}"/>
+                                                    </h:panelGrid>
+                                                    <p:commandButton value="Agregar" actionListener="#{personaC.guardarPersona()}" update="formPersonas"/>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <p:dataTable id="tblPersonas" value="#{personaC.lstPersonas}" var="person">
+                                                        <p:column headerText="Nombres">
+                                                            <p:outputLabel value="#{person.NOMPER}"/>
+                                                        </p:column>
+                                                        <p:column headerText="RUC">
+                                                            <p:outputLabel value="#{person.APEPER}"/>
+                                                        </p:column>
+                                                    </p:dataTable>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h:form>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="tab-3">
                                 <h:form id="formEmpresas">

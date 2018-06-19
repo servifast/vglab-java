@@ -13,7 +13,7 @@ import vg.edu.pe.model.PersonaM;
 @Named(value = "personaC")
 @SessionScoped
 public class PersonaC implements Serializable {
-    
+
     PersonaM pm = new PersonaM();
     private PersonaM selectedPersona;
     private List<PersonaM> lstPersonas;
@@ -26,47 +26,54 @@ public class PersonaC implements Serializable {
             Logger.getLogger(PersonaC.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    public void guardarPersona() throws Exception{
+
+    public void limpiar() {
+        pm = new PersonaM();
+    }
+
+    public void guardarPersona() throws Exception {
         PersonaD pd;
         try {
-           pd = new PersonaD();
-           pd.guardarPersona(pm);
+            pd = new PersonaD();
+            pd.guardarPersona(pm);
+            listarPersonas();
+            limpiar();
         } catch (Exception e) {
             throw e;
-        }   
+        }
     }
-    public void modificarPersona() throws Exception{
+
+    public void modificarPersona() throws Exception {
         PersonaD pd;
         try {
             pd = new PersonaD();
             pd.modificarPersona(selectedPersona);
         } catch (Exception e) {
             throw e;
-        }   
+        }
     }
-    public void eliminarPersona() throws Exception{
+
+    public void eliminarPersona() throws Exception {
         PersonaD pd;
         try {
-           pd = new PersonaD(); 
-           pd.eliminarPersona(selectedPersona);
+            pd = new PersonaD();
+            pd.eliminarPersona(selectedPersona);
         } catch (Exception e) {
             throw e;
-        }   
+        }
     }
-    public void listarPersonas() throws Exception{
+
+    public void listarPersonas() throws Exception {
         PersonaD pd;
         try {
             pd = new PersonaD();
             lstPersonas = pd.listarPersonas();
         } catch (Exception e) {
             throw e;
-        }   
+        }
     }
-    
-    
-    //Getter and Setter
 
+    //Getter and Setter
     public PersonaM getPm() {
         return pm;
     }
@@ -90,5 +97,5 @@ public class PersonaC implements Serializable {
     public void setLstPersonas(List<PersonaM> lstPersonas) {
         this.lstPersonas = lstPersonas;
     }
-    
+
 }

@@ -66,6 +66,7 @@ public class PersonaD extends Dao implements PersonaI {
         List<PersonaM> lista;
         ResultSet rs;
         try {
+            this.Conexion();
             String sql = "SELECT * FROM PERSONAS";
             PreparedStatement ps = this.getCn().prepareStatement(sql);
             rs = ps.executeQuery();
